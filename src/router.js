@@ -18,5 +18,10 @@ export default new Router({
       name: 'players',
       component: () => import('./views/Players.vue')
     },
+    {
+      path: '/generator',
+      name: 'generator',
+      component: () => import('./views/Generator.vue')
+    },
   ]
 })

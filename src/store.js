@@ -9,7 +9,10 @@ export default new Vuex.Store({
   plugins: [createPersistedState()],
   state: {
     players: [],
-    rounds: []
+    rounds: [],
+    scorecards: [],
+    games: [],
+    winners: []
   },
   mutations: {
     setPlayers(state, players) {

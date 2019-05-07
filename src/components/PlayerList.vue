@@ -177,7 +177,7 @@ export default {
     parsePlayers() {
       this.players = this.rawPlayers
         .split("\n")
-        .map(row => row.split(/\t|\,/))
+        .map(row => row.split(/\t|,/))
         .filter(row => row.length == 3)
         .map(data => {
           return {

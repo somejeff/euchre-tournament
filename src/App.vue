@@ -5,7 +5,7 @@
         <span>Euchre Tournamenter</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn to="/players">Player List</v-btn>
+      <v-btn color="success" v-if="$route.path!='/'" to="/">Done</v-btn>
     </v-toolbar>
 
     <v-content>
