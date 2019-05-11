@@ -23,5 +23,10 @@ export default new Router({
       name: 'generator',
       component: () => import('./views/Generator.vue')
     },
+    {
+      path: '/scorecards',
+      name: 'scorecards',
+      component: () => import('./views/Scorecards.vue')
+    },
   ]
 })
