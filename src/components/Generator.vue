@@ -28,7 +28,7 @@
             <v-divider></v-divider>
             <v-layout row ma-2 v-for="table in round.item.tables" :key="table.id">
               <v-flex xs2 text-no-wrap>Table {{ table.table }}</v-flex>
-              <v-flex xs5 text-truncate>
+              <v-flex xs5 text-truncate >
                 {{ table.team1.player1.name }}
                 <br>
                 {{ table.team1.player2.name }}
@@ -55,8 +55,8 @@ export default {
       loading: false,
       rounds: [],
       players: this.$store.state.players,
-      roundCount: 6,
-      seed: 1
+      roundCount: this.$store.state.roundCount || 6,
+      seed: this.$store.state.generator || 1
     };
   },
   created() {
@@ -98,6 +98,7 @@ export default {
 
       this.loading = false;
       this.$store.dispatch("updateRounds", this.rounds);
+      this.$store.dispatch("updateGeneratorSettings", { roundCount: this.roundCount, seed: this.seed });
     },
     shuffle(mersenne, arr) {
       // distilled from chancejs

@@ -23,8 +23,6 @@ export default {
 
       const hands = this.getHands();
       const roundCount = this.$store.state.rounds.length;
-      const players = this.$store.state.players;
-      const playerCount = players.length;
 
       let i = 0;
       while (i < hands.length) {
@@ -213,7 +211,6 @@ export default {
         });*/
     }
   },
-  getPartner(id, table) {}
 };
 </script>
 <style>

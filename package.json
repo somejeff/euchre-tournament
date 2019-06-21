@@ -13,6 +13,7 @@
     "core-js": "^2.6.5",
     "material-design-icons-iconfont": "^3.0.3",
     "mersenne-twister": "^1.1.0",
+    "pdfjs": "^2.3.0",
     "register-service-worker": "^1.6.2",
     "roboto-fontface": "*",
     "vue": "^2.6.10",

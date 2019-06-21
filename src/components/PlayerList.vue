@@ -63,7 +63,7 @@
     </v-data-table>
 
     <v-card v-if="bulkEdit">
-        <v-textarea outline auto-grow  v-model="rawPlayers" label="Player List" class="pa-4 "></v-textarea>
+        <v-textarea outline auto-grow  v-model="rawPlayers" label="Player List" class="pa-4 " placeholder="id,name,gender,table"></v-textarea>
       <v-card-actions>
         <v-spacer></v-spacer>
         <v-btn color="blue darken-1" flat @click="cancelBulkEdit">Cancel</v-btn>
@@ -84,7 +84,7 @@ export default {
         { text: "Player", value: "name" },
         { text: "Gender", value: "gender" },
         { text: "Fixed Table", value: "table" },
-        { text: "Actions", value: "name", sortable: false }
+        { text: "", value: "name", sortable: false }
       ],
       dialog: false,
       bulkEdit: false,
