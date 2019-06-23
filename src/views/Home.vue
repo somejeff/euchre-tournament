@@ -1,7 +1,6 @@
 <template>
   <v-container>
     <v-stepper v-model="step" vertical>
-      <v-stepper-header>
         <v-stepper-step
           :complete="playerListDone"
           step="1"
@@ -29,11 +28,10 @@
         <v-stepper-step :complete="scorecardsDone" step="3" editable @click="$router.push('/scorecards')">Print Scorecards</v-stepper-step>
 
         <v-divider></v-divider>
-        <v-stepper-step :complete="gamesDone" step="4" editable>Update Leaderboard</v-stepper-step>
+        <v-stepper-step :complete="gamesDone" step="4" editable @click="$router.push('/score')">Update Leaderboard</v-stepper-step>
 
         <v-divider></v-divider>
         <v-stepper-step step="5" editable>Announce Winners</v-stepper-step>
-      </v-stepper-header>
     </v-stepper>
   </v-container>
 </template>

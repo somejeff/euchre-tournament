@@ -23,8 +23,8 @@ export default {
 
       const hands = this.getHands();
       const roundCount = this.$store.state.rounds.length;
-      const players = this.$store.state.players;
-      const playerCount = players.length;
+//      const players = this.$store.state.players;
+//      const playerCount = players.length;
 
       let i = 0;
       while (i < hands.length) {
@@ -157,7 +157,7 @@ export default {
         fontSize: 10
       });
       
-      cell.text( " \n Check in the 'E' column, if were euchred.", {
+      cell.text( " \n Check in the 'E' column, if you were euchred.", {
         fontSize: 10
       });
     },
@@ -213,7 +213,7 @@ export default {
         });*/
     }
   },
-  getPartner(id, table) {}
+  //getPartner(id, table) {}
 };
 </script>
 <style>

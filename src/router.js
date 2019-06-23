@@ -28,5 +28,15 @@ export default new Router({
       name: 'scorecards',
       component: () => import('./views/Scorecards.vue')
     },
+    {
+      path: '/score',
+      name: 'score',
+      component: () => import('./views/Score.vue')
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: () => import('./Test.vue')
+    },
   ]
 })
