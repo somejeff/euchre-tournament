@@ -1,9 +1,8 @@
 language: node_js
 node_js:
-  - "lts/*"
+- lts/*
 script:
-  - npm run build
-
-
-
-
+- npm run build
+env:
+  global:
+    secure: xLP2Q7fc4jZ0GgR5ggZpKe6ANRcK9ONf8UpLifFXPre7sk0yvBh1Yg9ZXlwYesX0VRna19rk/w2rU5MIXPWv+NB46NJwy3RQsUKNPDQtyy0UY3QJzXgw6i2N2YzAUaQ7Pbo9YTyOwEKAIXujyw/F6V//595SiXYn9puBpPntY4eTGZaFTfI+wNbCmehfK3ihluCJUBe4aK+avJQvEGljI6OGjppgyHL8csulsgB05jA/KzZuJLl4qvHzXUnQ6ogPGEjZk68TutXL3I0AJCcZuMH1xOw+p7cidNugUbbQTGjtVU8/+NPB1quGV2YzqelrO1nzqzankwHE77t8uhxI27/+ZsWMhsdW6E8MXsw7muN4RqoK+lbMkjU5Xgu+T00g3XHOAi45PB8TpGTvLYxr5ipHFoMEnalka2wUxL5PAcEzM4sM1bnj0vbismUkN8lQq/ntRr6Zlko74Tp2RK+nlhyzS7fk4RuDclepCxKU3thV95JbBNaU930D/SoCbqR4wb40whStoembCU1DGbUOeQSPDpLWyn8oSP0tG6nEin+apqJqdnp5pRcSEUOpGoGsT6xJadr+2BncoB4HtyheUZRInnzWNjcZwNt7t9SAUFTpFngeNksYBMkvJFO4KTLd/NsqRd/EmRVCfE0tIX4TgWCpCl9MJCWlHwkgWj8CyKU=
