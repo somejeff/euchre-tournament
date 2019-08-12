@@ -36,7 +36,7 @@ export default new Router({
     {
       path: '/test',
       name: 'test',
-      component: () => import('./Test.vue')
+      component: () => import('./Test2.vue')
     },
   ]
 })

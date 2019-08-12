@@ -6,7 +6,6 @@ import store from './store'
 import './registerServiceWorker'
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
-import VueWorker from 'vue-worker'
 
 
 Vue.config.productionTip = false
@@ -16,5 +15,3 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
-
-Vue.use(VueWorker)
