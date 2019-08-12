@@ -46,7 +46,7 @@ export default {
 
   mounted() {
     this.spreadsheet = jexcel(this.$el, this.spreadsheetOptions);
-    //this.spreadsheet.insertRow();
+    this.spreadsheet.insertRow();
   },
   methods: {
     initialize() {
