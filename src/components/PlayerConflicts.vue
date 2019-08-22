@@ -9,27 +9,19 @@ import jexcel from "jexcel";
 import "jexcel/dist/jexcel.css";
 
 export default {
-  name: "PlayerList",
+  name: "PlayerConflicts",
   data() {
     return {
       spreadsheet: null,
       spreadsheetOptions: {
         data: [],
-        allowToolbar: true,
-        search: true,
 
-        colAlignments: ["left", "left", "center"],
+        colAlignments: ["left", "left"],
         columns: [
-          { type: "text", title: "Name", width: "400px" },
-          {
-            type: "dropdown",
-            title: "Gender",
-            width: "150px",
-            source: [{ id: "f", name: "Female" }, { id: "m", name: "Male" }]
-          },
+          { type: "dropdown", title: "Name", width: "400px",source:this.players},
+         
 
-          { type: "numeric", title: "Fixed Table", width: "200px" },
-          { type: "text", title: "Conflicting Player IDs", width: "200px" }
+          { type: "dropdown", title: "Conflicts", width: "400px" }
         ],
         onchange: this.dataChanged,
         allowInsertColumn: false,
@@ -52,30 +44,25 @@ export default {
   methods: {
     initialize() {
       this.players = this.$store.state.players;
-      this.spreadsheetOptions.data = this.players.map(player => {
-        return [
-          player.name,
-          player.gender,
-          player.table,
-          player.conflictingPlayers.join(',')
-        ];
-      });
+      this.spreadsheetOptions.data = this.players
+        .filter(player => player.conflicts != null)
+        .map(player => {
+          return [player.name, player.conflicts];
+        });
     },
     dataChanged() {
       this.players = this.spreadsheet
         .getData()
         .filter(row => row[0].length > 0)
         .map((row, i) => {
-          let conflict = row[3]*1;
           return {
             id: i + 1,
             name: row[0],
             gender: row[1],
-            table: row[2] * 1 > 0 ? row[2] : null,
-            conflictingPlayers: row[3]*1 == 0 ? [] : (""+row[3]).split(',').map(n=>n*1)
+            table: row[2] * 1 > 0 ? row[2] : null
           };
         });
-      this.$store.dispatch('updatePlayers', this.players);
+      this.$store.dispatch("updatePlayers", this.players);
     }
   }
 };

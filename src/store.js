@@ -11,12 +11,16 @@ export default new Vuex.Store({
     players: [],
     rounds: [],
     scorecards: [],
+    generatorSettings: [],
     games: [],
     winners: []
   },
   mutations: {
     setPlayers(state, players) {
       state.players = players;
+    },
+    setGeneratorSettings(state, settings) {
+      state.generatorSettings = settings;
     },
     setRounds(state, rounds) {
       state.rounds = rounds;
@@ -25,6 +29,9 @@ export default new Vuex.Store({
   actions: {
     updatePlayers({ commit }, players) {
       commit('setPlayers', players);
+    },
+    updateGeneratorSettings({ commit }, settings) {
+      commit('setGeneratorSettings', settings);
     },
 
     updateRounds({ commit }, rounds) {
